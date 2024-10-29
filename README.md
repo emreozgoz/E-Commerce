@@ -88,7 +88,7 @@ dotnet ef database update
 ### 6. Uygulamayı Başlatın
 ```bash
 dotnet run
-
+```
 ### E-Ticaret Projesi Entity İlişkileri
 ```bash
 Bu proje, çeşitli entity'lerin etkileşimde bulunduğu bir e-ticaret platformunu temsil etmektedir. Aşağıda ana entity'ler ve aralarındaki ilişkiler açıklanmıştır.
