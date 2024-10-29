@@ -65,15 +65,15 @@ Proje, katmanlı mimari prensiplerine dayanmaktadır. Temel bileşenler şunlard
 ```bash
 git clone https://github.com/kullanici_adiniz/e-ticaret-clone.git
  ```
-
+### 2. Proje Klasörüne Geçin
 ```bash
 cd e-ticaret-clone
  ```
-
+### 3. Gerekli Paketleri Yükleyin
 ```bash
 dotnet restore
  ```
-
+### 4. Veritabanı Ayarlarını Yapın
 ```bash
 {
   "ConnectionStrings": {
@@ -81,17 +81,16 @@ dotnet restore
   }
 }
  ```
-
+### 5. Veritabanı Migrations'larını Uygulayın
 ```bash
 dotnet ef database update
  ```
-
+### 6. Uygulamayı Başlatın
 ```bash
 dotnet run
 
+### E-Ticaret Projesi Entity İlişkileri
 ```bash
-# E-Ticaret Projesi Entity İlişkileri
-
 Bu proje, çeşitli entity'lerin etkileşimde bulunduğu bir e-ticaret platformunu temsil etmektedir. Aşağıda ana entity'ler ve aralarındaki ilişkiler açıklanmıştır.
 
 ## Entity'ler
