@@ -18,5 +18,18 @@ namespace DatabaseModel.Entities.Payment
         public DateTime PaymentDate { get; set; }  // Ödeme tarihi
         [MaxLength(50)]
         public string TransactionId { get; set; }  // İşlem kimliği (ödeme sağlayıcısı tarafından sağlanır)
+        public long CustomerId { get; set; }  // Müşteri kimliği
+        public string CustomerName { get; set; }  // Müşteri adı
+
+        // Kart bilgileri (şifreli veya maskelemeli olarak saklanmalı)
+        [MaxLength(16)]
+        public string CardNumber { get; set; }  // Kart numarası
+
+        public DateTime? ExpirationDate { get; set; }  // Son kullanma tarihi
+
+        [MaxLength(3)]
+        public string Cvv { get; set; }  // CVV kodu
+
+        public string Notes { get; set; }  // Ödeme notları
     }
 }

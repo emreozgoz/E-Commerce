@@ -1,12 +1,12 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using DatabaseModel.Entities.Base;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace DatabaseModel.Entities.Order
 {
-    public class OrderItem
+    public class OrderItem : EntityBase<long>
     {
-        [Required]
-        public long Id { get; set; }
+        
         [Required]
         public long ProductId { get; set; }  // Ürün kimliği
         [Required]

@@ -103,31 +103,5 @@ namespace DatabaseModel.Entities.Product
         // İlgili Ürünler (Öneri için kullanılabilir)
         public List<Product> RelatedProducts { get; set; }
     }
-
-    // Ürün varyantları örneğin renk, beden, vb.
-    public class ProductVariant
-    {
-        public int Id { get; set; }
-        public string Name { get; set; }
-        public string Value { get; set; }
-    }
-
-    // Ürün görselleri
-    public class ProductImage
-    {
-        public int Id { get; set; }
-        public string ImageUrl { get; set; }
-        public string AltText { get; set; }
-    }
-
-    // İndirim kuralları
-    public class DiscountRule
-    {
-        public int Id { get; set; }
-        public string Name { get; set; }
-        public decimal DiscountAmount { get; set; }
-        public DateTime ValidFrom { get; set; }
-        public DateTime ValidTo { get; set; }
-    }
 }
 
