@@ -4,12 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DatabaseModel.Entities.Enumerations
+namespace DatabaseModel.Enumerations
 {
     public enum ProductStatus
     {
         Active = 1,
         Passive = 0,
-       
+
     }
 }

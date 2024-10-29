@@ -1,3 +1,6 @@
+using DatabaseModel;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -7,6 +10,11 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+
+var mainConnectionString = builder.Configuration["EntityFramework:Ecommerce:Connection:MainInstance:ConnectionString"];
+
+builder.Services.AddDbContext<AppDbContext>(options =>
+    options.UseNpgsql(mainConnectionString, b => b.MigrationsAssembly("DatabaseModel")));
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

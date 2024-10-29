@@ -1,6 +1,6 @@
 ﻿using DatabaseModel.Entities.Base;
 using DatabaseModel.Entities.Base.Interface;
-using DatabaseModel.Entities.Enumerations;
+using DatabaseModel.Enumerations;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -107,6 +107,7 @@ namespace DatabaseModel.Entities.Product
     // Ürün varyantları örneğin renk, beden, vb.
     public class ProductVariant
     {
+        public int Id { get; set; }
         public string Name { get; set; }
         public string Value { get; set; }
     }
@@ -114,6 +115,7 @@ namespace DatabaseModel.Entities.Product
     // Ürün görselleri
     public class ProductImage
     {
+        public int Id { get; set; }
         public string ImageUrl { get; set; }
         public string AltText { get; set; }
     }
@@ -121,6 +123,7 @@ namespace DatabaseModel.Entities.Product
     // İndirim kuralları
     public class DiscountRule
     {
+        public int Id { get; set; }
         public string Name { get; set; }
         public decimal DiscountAmount { get; set; }
         public DateTime ValidFrom { get; set; }
