@@ -64,12 +64,15 @@ Proje, katmanlı mimari prensiplerine dayanmaktadır. Temel bileşenler şunlard
 
 ```bash
 git clone https://github.com/kullanici_adiniz/e-ticaret-clone.git
+ ```
 
 ```bash
 cd e-ticaret-clone
+ ```
 
 ```bash
 dotnet restore
+ ```
 
 ```bash
 {
@@ -77,9 +80,11 @@ dotnet restore
     "DefaultConnection": "Host=127.0.0.1;Database=E-CommerceDb;Username=developer;Password=123456;"
   }
 }
+ ```
 
 ```bash
 dotnet ef database update
+ ```
 
 ```bash
 dotnet run
@@ -189,4 +194,4 @@ Bu proje, çeşitli entity'lerin etkileşimde bulunduğu bir e-ticaret platformu
 
 ## Kullanım
 Projenin çalışma mantığı, siparişlerin kargo süreçleri, kuponlar üzerinden indirim uygulama süreçleri ve ödemelerin entegre edilmesidir.
-
+ ```
