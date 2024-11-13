@@ -1,12 +1,10 @@
 ﻿using DatabaseModel.Entities.Base;
 using DatabaseModel.Entities.Base.Interface;
+using DatabaseModel.Entities.Category;
 using DatabaseModel.Enumerations;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DatabaseModel.Entities.Product
 {
@@ -34,8 +32,8 @@ namespace DatabaseModel.Entities.Product
         public string SKU { get; set; }
 
         [Required]
-        [MaxLength(50)]
-        public string Category { get; set; }
+        public long CategoryId { get; set; }  // Kategori kimliği
+        public Category.Category Category { get; set; }  // Kategori referansı
 
         [Required]
         [MaxLength(50)]
@@ -43,12 +41,10 @@ namespace DatabaseModel.Entities.Product
 
         [Required]
         [MaxLength(50)]
-
         public string Brand { get; set; }
 
         [Required]
         public List<ProductVariant> Variants { get; set; }
-
 
         [Required]
         public List<ProductImage> Images { get; set; }
@@ -92,6 +88,11 @@ namespace DatabaseModel.Entities.Product
         [Required]
         public ProductStatus Status { get; set; }
 
+        public decimal Width { get; set; }  // En (width)
+        public decimal Length { get; set; } // Boy (length)
+        public decimal Height { get; set; } // Yükseklik (height)
+
+
         public List<DiscountRule> DiscountRules { get; set; }
 
         // Envanter durumu için alarm seviyesi (Stok azaldığında uyarı)
@@ -104,4 +105,3 @@ namespace DatabaseModel.Entities.Product
         public List<Product> RelatedProducts { get; set; }
     }
 }
-
